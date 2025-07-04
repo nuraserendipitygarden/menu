@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nura - Serendipity Garden | Bistro Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bistro-blue: #7B8DB8;
+            --bistro-light: #A4B3D1;
+            --bistro-purple: #9B8DB8;
+            --cream: #F5F2E8;
+            --dark-blue: #5A6B8A;
+            --accent-gold: #D4AF37;
+            --text-dark: #2C2C2C;
+            --text-light: #FFFFFF;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #40461F;
+            min-height: 100vh;
+            color: var(--text-light);
+            overflow-x: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .header h1 {
+            font-size: 1.125rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Menu Card */
+        .menu-card {
+            background: var(--bistro-light);
+            border-radius: 20px;
+            padding: 40px 35px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-title {
+            margin-bottom: 60px;
+        }
+
+        .card-title img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .card-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .card-icon img {
+            width: 120px;
+            height: auto;
+        }
+
+        .menu-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 60px;
+        }
+
+        .menu-btn {
+            padding: 18px 30px;
+            background: #8c93c9;
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            backdrop-filter: blur(10px);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .menu-btn:hover {
+            background: #7B8DB8;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 500px;
+            }
+
+            .logo {
+                width: 140px;
+                height: 140px;
+            }
+
+            .logo img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .title {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .card-title {
+                font-size: 3rem;
+            }
+
+            .menu-card {
+                padding: 50px 40px;
+                max-width: 500px;
+            }
+            
+            .card-title {
+                margin-bottom: 130px;
+            }
+            
+            .menu-buttons {
+                margin-top: 80px;
+            }
+
+            .menu-buttons {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .menu-btn {
+                flex: 1;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="nuralogosito.png" alt="Nura Logo">
+            </div>
+            <h1 class="title">Nura – Serendipity Garden</h1>
+        </header>
+
+        <!-- Menu Card -->
+        <div class="menu-card">
+            <div class="card-icon">
+                <img src="fiorebistrot.svg" alt="Bistro Flower">
+            </div>
+            <h2 class="card-title">
+                <img src="bistrotext.png" alt="BISTRO">
+            </h2>
+            <div class="menu-buttons">
+                <a href="bistro-it.pdf" class="menu-btn" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Menu IT
+                </a>
+                <a href="bistro-en.pdf" class="menu-btn" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Menu EN
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
