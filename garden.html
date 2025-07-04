@@ -27,19 +27,22 @@
         body {
             font-family: 'DM Sans', sans-serif;
             background: #40461F;
-            min-height: 100vh;
+            height: 100vh;
             color: var(--text-light);
             overflow-x: hidden;
+            overflow-y: auto;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            margin: 0;
         }
 
         .container {
             max-width: 400px;
             width: 100%;
             text-align: center;
+            animation: fadeInUp 1s ease-out;
         }
 
         /* Header */
